@@ -1,0 +1,14 @@
+﻿@model Category
+@{
+
+    if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+}
+<form method="post">
+<label asp-for="CategoryName"></label>
+<input type="text" class="form-control" asp-for="CategoryName" value="@Model.CategoryName"/>
+<span asp-validation-for="CategoryName"></span>
+<button class="btn btn-danger" type="submit">Create</button>
+</form>

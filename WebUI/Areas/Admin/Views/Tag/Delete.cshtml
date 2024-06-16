@@ -1,0 +1,8 @@
+﻿@model Tag
+
+<form method="post">
+
+<h6 class="font-weight-bold">Are you sure delete @Model.TagName category?</h6>
+<button class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id">Delete</button>
+    <button class="btn btn-facebook" type="button" onclick="location.href='/admin/tag/index'">Cancel</button>
+</form>

@@ -1,0 +1,30 @@
+﻿  @model List<Category>
+<a class="btn btn-success" href="/admin/category/create">Create</a>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Category Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    @{
+        int counter = 0;
+    }
+    <tbody>
+        
+            @foreach (var item in Model)
+            {
+                counter++;
+                
+                <tr>
+                    <td>@counter</td>
+                    <td>@item.CategoryName</td>
+                    <td>
+                        <a href="/admin/category/edit/@item.Id" class="btn btn-warning">Edit</a>
+                    <a href="/admin/category/delete/@item.Id" class=" btn btn-danger">Delete</a>
+                        </td>
+                </tr>
+            }
+        </tbody>
+    </table>
