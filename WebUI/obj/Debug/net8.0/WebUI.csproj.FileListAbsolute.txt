@@ -243,7 +243,6 @@ C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\WebUI.MvcApplica
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\WebUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\WebUI.RazorAssemblyInfo.cache
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\WebUI.RazorAssemblyInfo.cs
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\WebUI.sourcelink.json
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\obj\Debug\net8.0\staticwebassets\msbuild.WebUI.Microsoft.AspNetCore.StaticWebAssets.props

@@ -56,7 +56,7 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Edit(Tag tag)
         {
-            var findTag = _context.Tags.FirstOrDefault(x => x.TagName.ToLower() == tag.TagName.ToLower());
+            var findTag = _context.Tags.FirstOrDefault(x => x.TagName == tag.TagName);
             if (findTag != null)
             {
                 ViewBag.Error = "This tag name is already exists!";
