@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\views\\article\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\views\\article\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,19 +55,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Program.cs",
+              "RelativeDocumentMoniker": "WebUI\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Program.cs",
+              "RelativeToolTip": "WebUI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T18:01:50.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
               "RelativeToolTip": "WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAABHAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACsAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T20:19:07.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T20:19:07.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ArticleTag.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Models\\ArticleTag.cs",
               "RelativeDocumentMoniker": "WebUI\\Models\\ArticleTag.cs",
@@ -75,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Models\\Article.cs",
               "RelativeDocumentMoniker": "WebUI\\Models\\Article.cs",
@@ -83,12 +98,11 @@
               "RelativeToolTip": "WebUI\\Models\\Article.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAYwA4AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T19:24:36.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T19:24:36.228Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
@@ -96,8 +110,7 @@
               "RelativeToolTip": "WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAMAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T19:10:21.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T19:10:21.051Z"
             },
             {
               "$type": "Document",
@@ -107,14 +120,14 @@
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
               "RelativeToolTip": "WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCoAAAAIAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T19:09:47.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TagController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\TagController.cs",
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Controllers\\TagController.cs",
@@ -126,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Tag\\Index.cshtml",
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Views\\Tag\\Index.cshtml",
@@ -138,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Controllers\\CategoryController.cs",
