@@ -35,7 +35,7 @@ namespace WebUI.Areas.Admin.Controllers
                 ViewBag.Error = "The Category name is required!";
                 return View(category);
             }
-            var findCategory=_context.Categories.FirstOrDefault(x=>x.CategoryName==category.CategoryName);
+            var findCategory=_context.Categories.FirstOrDefault(x=>x.CategoryName.ToLower()==category.CategoryName.ToLower());
             if (findCategory != null)
             {
                 ViewBag.Error = "This category name is already exists!";
@@ -58,8 +58,7 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Edit(Category category) 
         {
-
-            var findCategory = _context.Categories.FirstOrDefault(x => x.CategoryName.ToLower() == category.CategoryName.ToLower());
+            var findCategory = _context.Categories.FirstOrDefault(x => x.CategoryName == category.CategoryName);
             if (findCategory != null)
             {
                 ViewBag.Error = "This category name is already exists!";

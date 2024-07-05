@@ -30,7 +30,7 @@
 
     <div class="form-group">
     <input type="file" accept="image/*" class="form-control" name="file" value=""/>
-    <span asp-validation-for="PhotoUrl"></span>
+    <span asp-validation-for="PhotoUrl" class="text-danger"></span>
 
     </div>
     @if(User.IsInRole("Admin")||User.IsInRole("Admin Editor")||User.IsInRole("Super Admin") || User.IsInRole("Manager"))

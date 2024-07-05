@@ -13,7 +13,6 @@ namespace WebUI.Areas.Admin.Controllers
         {
             _roleManager = roleManager;
         }
-        [Authorize(Roles ="Admin,Super Admin")]
         public IActionResult Index()
         {
             var roles= _roleManager.Roles.ToList();

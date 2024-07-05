@@ -16,7 +16,6 @@ namespace WebUI.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        [Authorize(Roles ="Admin")]
 
         [HttpGet]   
         public IActionResult Register()
