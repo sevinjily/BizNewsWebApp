@@ -7425,6 +7425,14 @@
       "PackagePath": "staticwebassets\\admin\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\5552956e-efa9-4035-8538-ac84b660ccc330dfa1874811595.602d7065cdd52.jpg",
+      "PackagePath": "staticwebassets\\article-images\\5552956e-efa9-4035-8538-ac84b660ccc330dfa1874811595.602d7065cdd52.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\c3b7b5f2-c390-45d4-a195-3cce4ef7a7000ee8ae28662073.55cb86a5d749c.jpg",
+      "PackagePath": "staticwebassets\\article-images\\c3b7b5f2-c390-45d4-a195-3cce4ef7a7000ee8ae28662073.55cb86a5d749c.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -7913,6 +7921,10 @@
       "PackagePath": "staticwebassets\\scss\\style.scss"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\uploads\\061c7db4-6bda-460a-b145-0b1275743af3Ekran şəkli 2023-09-23 153626.png",
+      "PackagePath": "staticwebassets\\uploads\\061c7db4-6bda-460a-b145-0b1275743af3Ekran şəkli 2023-09-23 153626.png"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\uploads\\07919e04-3106-4e50-a693-e9054447380fEkran şəkli 2023-09-28 002926.png",
       "PackagePath": "staticwebassets\\uploads\\07919e04-3106-4e50-a693-e9054447380fEkran şəkli 2023-09-28 002926.png"
     },
@@ -7935,6 +7947,10 @@
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\uploads\\dfbfff6f-202f-4373-893c-25bf11483408Ekran şəkli 2023-09-23 153626.png",
       "PackagePath": "staticwebassets\\uploads\\dfbfff6f-202f-4373-893c-25bf11483408Ekran şəkli 2023-09-23 153626.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\uploads\\f02b656a-7f76-41d8-964c-9050bf1c7c1a1b45eb35999271.Y3JvcCw3NTMsNTg5LDE3Myw1NQ.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f02b656a-7f76-41d8-964c-9050bf1c7c1a1b45eb35999271.Y3JvcCw3NTMsNTg5LDE3Myw1NQ.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\uploads\\f24f1620-aa48-4eeb-a9b0-d232df3d354eEkran şəkli 2023-09-28 002926.png",

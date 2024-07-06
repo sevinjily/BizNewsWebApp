@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Article>
 <a href="/admin/article/create" class="btn btn-success">Create</a>
-<table class="table table-hover">
+<table class="table table-hover table-striped table-bordered">
     <thead>
         <tr>
             <th>#</th>
@@ -21,15 +21,22 @@
             counter++;   
             <tr>
             <td>@counter</td>
-            <td>@item.Id</td>
+            <td>@item.Title</td>
             <td>@item.Category.CategoryName</td>
+            <td>
+
             @foreach (var tag in item.ArticleTags)
                 {
                     <span>@tag.Tag.TagName</span>
                 }
+            </td>
             <td>@(item.IsActive?"aktiv":"deaktiv")</td>
-            <td></td>
-            <td></td>
+            <td><img src="@item.PhotoUrl" width="200"/></td>
+            <td>
+                    <form method="post" asp-action="Delete" asp-route-id="@item.Id">
+                        <button type="submit" onclick="return confirm('Are you sure to delete this article: @item.Title')" class="btn btn-danger">Delete</button>
+                    </form>
+            </td>
         </tr>
         }
     </tbody>

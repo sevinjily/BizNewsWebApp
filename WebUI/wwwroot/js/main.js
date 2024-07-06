@@ -1,5 +1,6 @@
 (function ($) {
     "use strict";
+
     
     // Dropdown on mouse hover
     $(document).ready(function () {

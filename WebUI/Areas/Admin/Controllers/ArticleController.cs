@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using WebUI.Data;
+using WebUI.Helpers;
 using WebUI.Models;
 
 namespace WebUI.Areas.Admin.Controllers
@@ -26,9 +28,15 @@ namespace WebUI.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var articles = _context.Articles.ToList();
+            var articles = _context.Articles
+                .Where(x=>x.IsDeleted==false)
+                .Include(x=>x.Category)
+                .Include(x=>x.ArticleTags)
+                .ThenInclude(x=>x.Tag)
+                .ToList();
             return View(articles);
         }
+        [Authorize]
         [HttpGet]
 
        public IActionResult Create()
@@ -54,11 +62,7 @@ namespace WebUI.Areas.Admin.Controllers
             if (file != null)
             {
 
-            var path = Path.Combine("/uploads/", Guid.NewGuid() + file.FileName);
-            //var path="uploads/"+Guid.NewGuid()+ file.FileName;
-            using FileStream fileStream = new(_env.WebRootPath + path,FileMode.Create);
-            await file.CopyToAsync(fileStream);
-                newArticle.PhotoUrl = path;
+            newArticle.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath,"/article-images/");
             }
             else
             {
@@ -91,6 +95,14 @@ namespace WebUI.Areas.Admin.Controllers
            await _context.SaveChangesAsync();
 
             return Redirect("Index");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var article = _context.Articles.FirstOrDefault(x => x.Id == id);
+            _context.Articles.Remove(article);
+            await _context.SaveChangesAsync();
+            return View();
         }
         
     }
