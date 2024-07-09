@@ -36,6 +36,7 @@
                     <form method="post" asp-action="Delete" asp-route-id="@item.Id">
                         <button type="submit" onclick="return confirm('Are you sure to delete this article: @item.Title')" class="btn btn-danger">Delete</button>
                     </form>
+                    <a class="btn btn-warning" asp-area="Admin" asp-action="Edit" asp-controller="Article" asp-route-id="@item.Id">Edit</a>
             </td>
         </tr>
         }

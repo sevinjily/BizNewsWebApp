@@ -1,0 +1,63 @@
+﻿@model Article
+
+@if (ViewData["title"] != null)
+{
+    <span>@ViewData["title"]</span>
+}
+
+<form method="post" enctype="multipart/form-data">
+<input type="hidden" asp-for="Id" value=""/>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+
+        <label asp-for="Title">Title</label>
+        <input value="@Model.Title" class="form-control" type="text" asp-for="Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content">Content</label>
+        <textarea id="editor1" value="" class="form-control" asp-for="Content"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option>Select Category</option>
+        </select>
+    </div>
+    <div class="form-group">
+
+        <select multiple name="tagIds" class="form-control">
+            @foreach (var item in ViewData["tags"] as List<Tag>)
+            {
+
+                <option value="@item.Id">@item.TagName</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="file" accept="image/*" class="form-control" name="file" value="" />
+        <span asp-validation-for="PhotoUrl" class="text-danger"></span>
+        <img src="@Model.PhotoUrl" width="200" alt=""/>
+
+    </div>
+    @if (User.IsInRole("Admin") || User.IsInRole("Admin Editor") || User.IsInRole("Super Admin") || User.IsInRole("Manager"))
+    {
+        <div class="form-group">
+            <label asp-for="IsActive"></label>
+            <input type="checkbox" asp-for="IsActive" />
+        </div>
+        <div class="form-group">
+            <label asp-for="IsFeatured"></label>
+            <input type="checkbox" asp-for="IsFeatured" />
+        </div>
+    }
+    <button class="btn btn-success" type="submit">Update</button>
+</form>
+
+@section Script {
+    <script src="//cdn.ckeditor.com/4.22.0/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+} 

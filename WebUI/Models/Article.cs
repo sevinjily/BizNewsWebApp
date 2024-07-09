@@ -1,11 +1,15 @@
-﻿namespace WebUI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebUI.Models
 {
     public class Article
     {
         public Guid Id { get; set; }
+        [MinLength(5)]
+        [MaxLength(50)]
         public string Title { get; set; }
         public string Content { get; set; }
-        public string PhotoUrl { get; set; }
+        public string? PhotoUrl { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public string CreatedBy { get; set; }

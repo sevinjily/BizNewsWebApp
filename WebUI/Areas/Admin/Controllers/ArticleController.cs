@@ -50,6 +50,8 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Article article,IFormFile file,List<Tag> tagIds)
         {
+
+           
             var categories = _context.Categories.ToList();
             var tags = _context.Tags.ToList();
             ViewData["tags"] = tags;
@@ -57,6 +59,8 @@ namespace WebUI.Areas.Admin.Controllers
 
             var userId =_contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var user=await _userManager.FindByIdAsync(userId);
+            
+
             Article newArticle = new();
 
             if (file != null)
@@ -66,6 +70,7 @@ namespace WebUI.Areas.Admin.Controllers
             }
             else
             {
+                ModelState.AddModelError("error","Photo is required");
                 return View();
             }
            
@@ -77,8 +82,13 @@ namespace WebUI.Areas.Admin.Controllers
             newArticle.IsFeatured = article.IsFeatured;
             newArticle.CreatedBy = user.FirstName+ " " +user.LastName;
             newArticle.SeoUrl = "";
+            if (newArticle.Title == null)
+            {
+                ViewData["title"] = "Title is required";
+                return View(article);
+            }
 
-           await _context.Articles.AddAsync(newArticle);
+            await _context.Articles.AddAsync(newArticle);
            await _context.SaveChangesAsync();
 
             for (int i = 0; i < tagIds.Count; i++)
@@ -94,13 +104,64 @@ namespace WebUI.Areas.Admin.Controllers
             }
            await _context.SaveChangesAsync();
 
-            return Redirect("Index");
+            return RedirectToAction("Index");
         }
         [HttpPost]
         public async Task<IActionResult> Delete(Guid id)
         {
             var article = _context.Articles.FirstOrDefault(x => x.Id == id);
+            var path=(_env.WebRootPath+article.PhotoUrl).ToLower();
+
+            if(System.IO.File.Exists(path)) 
+                System.IO.File.Delete(path);
+
             _context.Articles.Remove(article);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Edit(Guid id)
+        {
+            if (id == null)
+                return NotFound();
+            var article=_context.Articles.FirstOrDefault(x=>x.Id== id);
+            if (article == null)
+            {
+                return NotFound();
+            }
+            var categories = _context.Categories.ToList();
+            var tags = _context.Tags.ToList();
+            ViewData["tags"] = tags;
+            ViewBag.Categories = new SelectList(categories, "Id", "CategoryName");
+            return View(article);
+        }
+        //todo Seo,Comment
+        [HttpPost]
+        public async Task<IActionResult> Edit(Article article,IFormFile file,List<Tag> tagIds)
+        {
+            var categories = _context.Categories.ToList();
+            var tags = _context.Tags.ToList();
+            ViewData["tags"] = tags;
+            ViewBag.Categories = new SelectList(categories, "Id", "CategoryName");
+
+            var userId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var user=await _userManager.FindByIdAsync(userId);
+
+            var findArticle=_context.Articles.FirstOrDefault(x=>x.Id== article.Id);
+            if (file!=null)
+            {
+                article.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath, "article-images");
+            }
+
+            findArticle.SeoUrl = "";
+            findArticle.Title= article.Title;
+            findArticle.UpdatedDate = DateTime.Now;
+            findArticle.UpdatedBy = user.Email;
+            findArticle.Content = article.Content;
+            findArticle.IsActive = article.IsActive;
+            findArticle.IsDeleted = article.IsDeleted;
+            findArticle.IsFeatured= article.IsFeatured;
+            _context.Articles.Update(article);
             await _context.SaveChangesAsync();
             return View();
         }
