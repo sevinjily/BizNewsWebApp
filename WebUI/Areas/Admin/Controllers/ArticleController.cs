@@ -29,11 +29,11 @@ namespace WebUI.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var articles = _context.Articles
-                .Where(x=>x.IsDeleted==false)
-                .Include(x=>x.Category)
-                .Include(x=>x.ArticleTags)
-                .ThenInclude(x=>x.Tag)
-                .ToList();
+              .Where(x => x.IsDeleted == false)
+              .Include(x => x.Category)
+              .Include(x => x.ArticleTags)
+              .ThenInclude(x => x.Tag)
+              .ToList();
             return View(articles);
         }
         [Authorize]
@@ -147,23 +147,15 @@ namespace WebUI.Areas.Admin.Controllers
             var userId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var user=await _userManager.FindByIdAsync(userId);
 
-            var findArticle=_context.Articles.FirstOrDefault(x=>x.Id== article.Id);
             if (file!=null)
             {
-                article.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath, "article-images");
+                article.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath, "/article-images/");
             }
+            article.SeoUrl = "";
 
-            findArticle.SeoUrl = "";
-            findArticle.Title= article.Title;
-            findArticle.UpdatedDate = DateTime.Now;
-            findArticle.UpdatedBy = user.Email;
-            findArticle.Content = article.Content;
-            findArticle.IsActive = article.IsActive;
-            findArticle.IsDeleted = article.IsDeleted;
-            findArticle.IsFeatured= article.IsFeatured;
             _context.Articles.Update(article);
             await _context.SaveChangesAsync();
-            return View();
+            return RedirectToAction("Index");
         }
         
     }
