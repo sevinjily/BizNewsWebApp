@@ -35,8 +35,16 @@
         <select multiple name="tagIds" class="form-control">
             @foreach (var item in ViewData["tags"] as List<Tag>)
             {
+                if (Model.ArticleTags.Select(x => x.TagId).Contains(item.Id))
+                {
+                    
+                    <option selected value="@item.Id">@item.TagName</option>
+                }
+                else
+                {
+                    <option value="@item.Id">@item.TagName</option>
 
-                <option value="@item.Id">@item.TagName</option>
+                }
             }
         </select>
     </div>

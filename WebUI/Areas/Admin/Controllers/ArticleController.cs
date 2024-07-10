@@ -120,11 +120,13 @@ namespace WebUI.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public IActionResult Edit(Guid id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            if (id == null)
-                return NotFound();
-            var article=_context.Articles.FirstOrDefault(x=>x.Id== id);
+            if (id == null) return NotFound();
+
+            var article= await _context.Articles
+                .Include(x=>x.ArticleTags)
+                .ThenInclude(x=>x.Tag).FirstOrDefaultAsync(x=>x.Id== id);
             if (article == null)
             {
                 return NotFound();
@@ -152,7 +154,8 @@ namespace WebUI.Areas.Admin.Controllers
                 article.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath, "/article-images/");
             }
             article.SeoUrl = "";
-
+            article.UpdatedDate = DateTime.Now;
+            article.UpdatedBy = user.FirstName + " " + user.LastName; 
             _context.Articles.Update(article);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
