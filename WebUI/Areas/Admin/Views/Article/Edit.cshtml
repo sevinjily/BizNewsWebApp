@@ -1,9 +1,6 @@
 ﻿@model Article
 
-@if (ViewData["title"] != null)
-{
-    <span>@ViewData["title"]</span>
-}
+
 
 <form method="post" enctype="multipart/form-data">
 <input type="hidden" asp-for="Id"/>
@@ -33,7 +30,7 @@
     <div class="form-group">
 
         <select multiple name="tagIds" class="form-control">
-            @foreach (var item in ViewData["tags"] as List<Tag>)
+            @foreach (var item in ViewBag.Tags as List<Tag>)
             {
                 if (Model.ArticleTags.Select(x => x.TagId).Contains(item.Id))
                 {

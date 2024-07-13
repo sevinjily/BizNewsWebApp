@@ -48,7 +48,7 @@ namespace WebUI.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Article article,IFormFile file,List<Tag> tagIds)
+        public async Task<IActionResult> Create(Article article,IFormFile file,List<Guid> tagIds)
         {
 
            
@@ -96,7 +96,7 @@ namespace WebUI.Areas.Admin.Controllers
                 ArticleTag articleTag = new()
                 {
                     ArticleId = newArticle.Id,
-                    TagId = tagIds[i].Id
+                    TagId = tagIds[i]
                 };
               await _context.ArticleTags.AddAsync(articleTag);
                 
@@ -127,24 +127,34 @@ namespace WebUI.Areas.Admin.Controllers
             var article= await _context.Articles
                 .Include(x=>x.ArticleTags)
                 .ThenInclude(x=>x.Tag).FirstOrDefaultAsync(x=>x.Id== id);
+
             if (article == null)
             {
-                return NotFound();
+                return NotFound();      
             }
+
             var categories = _context.Categories.ToList();
             var tags = _context.Tags.ToList();
-            ViewData["tags"] = tags;
+
+            ViewBag.Tags = tags;
             ViewBag.Categories = new SelectList(categories, "Id", "CategoryName");
+
+            var selectedTagIds = article.ArticleTags.Select(x => x.TagId).ToList();
+            ViewData["selectedTagIds"] = selectedTagIds;
             return View(article);
         }
         //todo Seo,Comment
         [HttpPost]
-        public async Task<IActionResult> Edit(Article article,IFormFile file,List<Tag> tagIds)
+        public async Task<IActionResult> Edit(Article article,IFormFile file,List<Guid> tagIds)
         {
             var categories = _context.Categories.ToList();
             var tags = _context.Tags.ToList();
-            ViewData["tags"] = tags;
+            ViewBag.Tags = tags;
             ViewBag.Categories = new SelectList(categories, "Id", "CategoryName");
+
+            var selectedTagIds = article.ArticleTags.Select(x => x.TagId).ToList();
+            ViewData["selectedTagIds"] = selectedTagIds;
+
 
             var userId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var user=await _userManager.FindByIdAsync(userId);
@@ -155,10 +165,28 @@ namespace WebUI.Areas.Admin.Controllers
             }
             article.SeoUrl = "";
             article.UpdatedDate = DateTime.Now;
-            article.UpdatedBy = user.FirstName + " " + user.LastName; 
+            article.UpdatedBy = user.FirstName + " " + user.LastName;
+
+
+            var findTags = _context.ArticleTags.Where(x => x.ArticleId == article.Id).ToList();
+            _context.ArticleTags.RemoveRange(findTags);
+            await _context.SaveChangesAsync();
+
+            for (int i = 0; i < tagIds.Count; i++)
+            {
+                ArticleTag articleTag = new()
+                {
+                    ArticleId = article.Id,
+                    TagId = tagIds[i]
+                };
+                await _context.ArticleTags.AddAsync(articleTag);
+            }
+            await _context.SaveChangesAsync();
+
             _context.Articles.Update(article);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
+
         }
         
     }
