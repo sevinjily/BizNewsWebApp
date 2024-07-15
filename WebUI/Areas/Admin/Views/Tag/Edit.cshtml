@@ -7,7 +7,7 @@
     }
 }
 <form method="post">
-
+    <div asp-validation-summary="ModelOnly"></div>
 <label asp-for="TagName"></label>
 <input type="text" asp-for="TagName" value="@Model.TagName" class="form-control"/>
 <span asp-validation-for="TagName"></span>

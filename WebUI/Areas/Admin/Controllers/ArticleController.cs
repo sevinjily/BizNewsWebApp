@@ -66,7 +66,7 @@ namespace WebUI.Areas.Admin.Controllers
             if (file != null)
             {
 
-            newArticle.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath,"/article-images/");
+            newArticle.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath,"\\article-images\\");
             }
             else
             {
@@ -81,7 +81,7 @@ namespace WebUI.Areas.Admin.Controllers
             newArticle.IsActive = article.IsActive;
             newArticle.IsFeatured = article.IsFeatured;
             newArticle.CreatedBy = user.FirstName+ " " +user.LastName;
-            newArticle.SeoUrl = "";
+            newArticle.SeoUrl = article.Title.ReplaceInvalidChars();
             if (newArticle.Title == null)
             {
                 ViewData["title"] = "Title is required";
@@ -110,11 +110,12 @@ namespace WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             var article = _context.Articles.FirstOrDefault(x => x.Id == id);
-            var path=(_env.WebRootPath+article.PhotoUrl).ToLower();
+            var path = (_env.WebRootPath + article.PhotoUrl).ToLower();
 
-            if(System.IO.File.Exists(path)) 
+            if (System.IO.File.Exists(path))
+            {
                 System.IO.File.Delete(path);
-
+            }
             _context.Articles.Remove(article);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -126,7 +127,7 @@ namespace WebUI.Areas.Admin.Controllers
 
             var article= await _context.Articles
                 .Include(x=>x.ArticleTags)
-                .ThenInclude(x=>x.Tag).FirstOrDefaultAsync(x=>x.Id== id);
+               .FirstOrDefaultAsync(x=>x.Id== id);
 
             if (article == null)
             {
@@ -139,10 +140,9 @@ namespace WebUI.Areas.Admin.Controllers
             ViewBag.Tags = tags;
             ViewBag.Categories = new SelectList(categories, "Id", "CategoryName");
 
-            var selectedTagIds = article.ArticleTags.Select(x => x.TagId).ToList();
-            ViewData["selectedTagIds"] = selectedTagIds;
+           
             return View(article);
-        }
+        }   
         //todo Seo,Comment
         [HttpPost]
         public async Task<IActionResult> Edit(Article article,IFormFile file,List<Guid> tagIds)
@@ -152,18 +152,14 @@ namespace WebUI.Areas.Admin.Controllers
             ViewBag.Tags = tags;
             ViewBag.Categories = new SelectList(categories, "Id", "CategoryName");
 
-            var selectedTagIds = article.ArticleTags.Select(x => x.TagId).ToList();
-            ViewData["selectedTagIds"] = selectedTagIds;
-
-
             var userId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var user=await _userManager.FindByIdAsync(userId);
 
             if (file!=null)
             {
-                article.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath, "/article-images/");
+                article.PhotoUrl = await file.SaveFileAsync(_env.WebRootPath, "\\article-images\\");
             }
-            article.SeoUrl = "";
+            article.SeoUrl = article.Title.ReplaceInvalidChars();
             article.UpdatedDate = DateTime.Now;
             article.UpdatedBy = user.FirstName + " " + user.LastName;
 

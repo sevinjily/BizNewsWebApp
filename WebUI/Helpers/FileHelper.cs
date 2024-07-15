@@ -1,9 +1,11 @@
-﻿using System.IO;
+﻿using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace WebUI.Helpers
 {
     public static class FileHelper
     {
+   
         public static async Task<string> SaveFileAsync(this IFormFile file,string WebRootPath,string folderName)
         {
             if(!Directory.Exists(WebRootPath+folderName))
@@ -16,5 +18,6 @@ namespace WebUI.Helpers
             await file.CopyToAsync(fileStream);
             return path;
         }
+ 
 }
 }

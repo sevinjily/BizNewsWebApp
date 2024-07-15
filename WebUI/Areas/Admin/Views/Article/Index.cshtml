@@ -1,6 +1,11 @@
 ﻿@model IEnumerable<Article>
+
+    @section Link{
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    }
+
 <a href="/admin/article/create" class="btn btn-success">Create</a>
-<table class="table table-hover table-striped table-bordered">
+<table id="myTable" class="table table-hover table-striped table-bordered">
     <thead>
         <tr>
             <th>#</th>
@@ -27,7 +32,7 @@
 
             @foreach (var tag in item.ArticleTags)
                 {
-                    <span>@tag.Tag.TagName</span>
+                    <span>@tag.Tag.TagName/</span>
                 }
             </td>
             <td>@(item.IsActive?"aktiv":"deaktiv")</td>
@@ -42,3 +47,10 @@
         }
     </tbody>
 </table>
+
+            @section Script{
+        <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js" ></script>
+                <script>
+        let table = new DataTable('#myTable');
+                </script>
+            }

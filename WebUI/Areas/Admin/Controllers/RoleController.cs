@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using WebUI.Models;
 
 namespace WebUI.Areas.Admin.Controllers
 {
@@ -18,7 +19,7 @@ namespace WebUI.Areas.Admin.Controllers
             var roles= _roleManager.Roles.ToList();
             return View(roles);
         }
-        [HttpGet]
+       
             public IActionResult Create()
         {
             return View();
@@ -26,9 +27,15 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(IdentityRole role)
         {
-            if(!ModelState.IsValid)
+           
+            //if(!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            if (string.IsNullOrEmpty(role.Name))
             {
-                return View();
+                ViewBag.Name = "Role name is required!";
+                return View(role);
             }
             var checkRole= await _roleManager.FindByNameAsync(role.Name);
             if(checkRole != null)
@@ -36,6 +43,7 @@ namespace WebUI.Areas.Admin.Controllers
                 ViewData["Error"] = "This role name is already exists!";
                 return View();
             }
+           
             await _roleManager.CreateAsync(role);
             return RedirectToAction("Index");
         }
