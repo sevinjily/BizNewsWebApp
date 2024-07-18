@@ -1,20 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebUI.Data;
 using WebUI.Models;
+using WebUI.ViewModel;
 
 namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly AppDbContext _context;
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
+            var featuredArticles=_context.Articles
+                .Where(x=>x.IsFeatured==true&&x.IsDeleted==false)
+                .OrderByDescending(x=>x.UpdatedDate)
+                .Take(4).ToList();
+            HomeVM homeVM = new() 
+            { 
+                FeaturedArticles=featuredArticles 
+            };
+
             return View();
         }
 

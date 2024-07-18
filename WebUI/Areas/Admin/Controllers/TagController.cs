@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text;
 using WebUI.Data;
 using WebUI.Models;
 
@@ -56,13 +57,34 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Edit(Tag tag)
         {
-            var findTag = _context.Tags.FirstOrDefault(x => x.TagName== tag.TagName);
-            if (findTag != null)
+            var findTag = _context.Tags.FirstOrDefault(x => x.Id== tag.Id);
+            bool checkTagName = true;
+            byte[] AsciibytesUI=Encoding.ASCII.GetBytes(tag.TagName);
+            byte[] AsciibytesDb=Encoding.ASCII.GetBytes(findTag.TagName);
+            if (tag.TagName == findTag.TagName)
+            {
+
+            for (int i = 0; i < tag.TagName.Length; i++)
+            {
+                    if (AsciibytesUI[i]!= AsciibytesDb[i])
+                    {
+                    checkTagName = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                checkTagName = false;
+            }
+            
+            if (checkTagName)
             {
                 ViewBag.Error = "This tag name is already exists!";
-                return View(findTag);
+                return View(findTag);   
             }
-            _context.Tags.Update(tag);
+            findTag.TagName = tag.TagName;
+            _context.Tags.Update(findTag);
             _context.SaveChanges();
             return Redirect("/admin/tag/index");
 

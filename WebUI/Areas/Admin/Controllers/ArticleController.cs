@@ -110,7 +110,7 @@ namespace WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             var article = _context.Articles.FirstOrDefault(x => x.Id == id);
-            var path = (_env.WebRootPath + article.PhotoUrl).ToLower();
+            var path =Path.Combine(_env.WebRootPath,article.PhotoUrl) ;
 
             if (System.IO.File.Exists(path))
             {
