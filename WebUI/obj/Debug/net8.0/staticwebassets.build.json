@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QAQubiYcWdNjl464W6s9VmCOGHZxAkO6IYzLMUVdFWo=",
+  "Hash": "Y1YN98OJl7EShgeBXVxNloWbyb6ZkQZM0ubldUYTWMo=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -36438,25 +36438,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\vendor\\jquery-easing\\jquery.easing.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\a989af71-defe-417e-a0f2-b458589eca19Ethernet1.jpeg",
-      "SourceId": "WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\",
-      "BasePath": "_content/WebUI",
-      "RelativePath": "article-images/a989af71-defe-417e-a0f2-b458589eca19Ethernet1.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\article-images\\a989af71-defe-417e-a0f2-b458589eca19Ethernet1.jpeg"
     },
     {
       "Identity": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\css\\style.css",

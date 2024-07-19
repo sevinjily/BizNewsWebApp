@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using WebUI.Data;
 using WebUI.Models;
@@ -20,6 +21,7 @@ namespace WebUI.Controllers
         {
             var featuredArticles=_context.Articles
                 .Where(x=>x.IsFeatured==true&&x.IsDeleted==false)
+                .Include(x=>x.Category) 
                 .OrderByDescending(x=>x.UpdatedDate)
                 .Take(4).ToList();
             HomeVM homeVM = new() 

@@ -7425,10 +7425,6 @@
       "PackagePath": "staticwebassets\\admin\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\a989af71-defe-417e-a0f2-b458589eca19Ethernet1.jpeg",
-      "PackagePath": "staticwebassets\\article-images\\a989af71-defe-417e-a0f2-b458589eca19Ethernet1.jpeg"
-    },
-    {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
