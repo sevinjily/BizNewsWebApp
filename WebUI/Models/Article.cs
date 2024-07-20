@@ -6,7 +6,7 @@ namespace WebUI.Models
     {
         public Guid Id { get; set; }
         [MinLength(5)]
-        [MaxLength(50)]
+        [MaxLength(35)]
         public string Title { get; set; }
         public string Content { get; set; }
         public string? PhotoUrl { get; set; }

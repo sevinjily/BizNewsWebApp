@@ -189,7 +189,6 @@ namespace WebUI.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("PhotoUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SeoUrl")
@@ -198,8 +197,8 @@ namespace WebUI.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(35)
+                        .HasColumnType("nvarchar(35)");
 
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");

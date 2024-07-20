@@ -3,56 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\views\\article\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\article\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\viewmodel\\detailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\viewmodel\\detailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\viewmodel\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\viewmodel\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\areas\\admin\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|c:\\users\\asus\\source\\repos\\biznewswebapp\\webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\Downloads\\BizNews Free Website Template - Free-CSS.com\\free-news-website-template\\single.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\helpers\\seohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\helpers\\seohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\models\\articletag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\models\\articletag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\areas\\admin\\views\\article\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|solutionrelative:webui\\areas\\admin\\views\\article\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFEBACED-51BD-4D96-83C6-E1203335E29B}|WebUI\\WebUI.csproj|C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\webui\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,182 +45,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\ViewModel\\DetailVM.cs",
+              "RelativeDocumentMoniker": "WebUI\\ViewModel\\DetailVM.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\ViewModel\\DetailVM.cs",
+              "RelativeToolTip": "WebUI\\ViewModel\\DetailVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T15:07:25.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebUI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebUI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMABAACQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-20T13:01:20.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeVM.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\ViewModel\\HomeVM.cs",
+              "RelativeDocumentMoniker": "WebUI\\ViewModel\\HomeVM.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\ViewModel\\HomeVM.cs",
+              "RelativeToolTip": "WebUI\\ViewModel\\HomeVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T12:58:43.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebUI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebUI\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAiwBsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T12:39:46.187Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TagController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\TagController.cs",
-              "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Controllers\\TagController.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\TagController.cs",
-              "RelativeToolTip": "WebUI\\Areas\\Admin\\Controllers\\TagController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAswE8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T19:22:50.015Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "WebUI\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T16:31:35.289Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "WebUI\\Views\\_ViewStart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T16:31:33.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebUI\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAAAIkAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T16:30:58.919Z",
+              "DocumentIndex": 6,
+              "Title": "single.html",
+              "DocumentMoniker": "C:\\Users\\Asus\\Downloads\\BizNews Free Website Template - Free-CSS.com\\free-news-website-template\\single.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\BizNews Free Website Template - Free-CSS.com\\free-news-website-template\\single.html",
+              "ToolTip": "C:\\Users\\Asus\\Downloads\\BizNews Free Website Template - Free-CSS.com\\free-news-website-template\\single.html",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\BizNews Free Website Template - Free-CSS.com\\free-news-website-template\\single.html",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAH0AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-20T11:36:38.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebUI\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebUI\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB4AAAAAAAAA",
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\Article\\Detail.cshtml",
+              "RelativeDocumentMoniker": "WebUI\\Views\\Article\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Views\\Article\\Detail.cshtml",
+              "RelativeToolTip": "WebUI\\Views\\Article\\Detail.cshtml",
+              "ViewState": "AQIAALAAAAAAAAAAAAAAAMQAAACPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-20T11:04:38.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Controllers\\ArticleController.cs",
+              "RelativeDocumentMoniker": "WebUI\\Controllers\\ArticleController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Controllers\\ArticleController.cs",
+              "RelativeToolTip": "WebUI\\Controllers\\ArticleController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwDUAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T16:21:39.544Z",
+              "WhenOpened": "2024-07-20T11:01:03.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeToolTip": "WebUI\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T12:42:38.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "WebUI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-15T12:22:32.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SeoHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Helpers\\SeoHelper.cs",
-              "RelativeDocumentMoniker": "WebUI\\Helpers\\SeoHelper.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Helpers\\SeoHelper.cs",
-              "RelativeToolTip": "WebUI\\Helpers\\SeoHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T11:09:20.817Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ArticleTag.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Models\\ArticleTag.cs",
-              "RelativeDocumentMoniker": "WebUI\\Models\\ArticleTag.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Models\\ArticleTag.cs",
-              "RelativeToolTip": "WebUI\\Models\\ArticleTag.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T14:10:35.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FileHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Helpers\\FileHelper.cs",
-              "RelativeDocumentMoniker": "WebUI\\Helpers\\FileHelper.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Helpers\\FileHelper.cs",
-              "RelativeToolTip": "WebUI\\Helpers\\FileHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T11:52:00.001Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
-              "RelativeToolTip": "WebUI\\Areas\\Admin\\Views\\Article\\Create.cshtml",
-              "ViewState": "AQIAACwAAAAAAAAAAAAwwDgAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-11T08:12:36.652Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
-              "RelativeToolTip": "WebUI\\Areas\\Admin\\Views\\Article\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T14:38:41.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ArticleController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
               "RelativeDocumentMoniker": "WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
               "RelativeToolTip": "WebUI\\Areas\\Admin\\Controllers\\ArticleController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCIAAAAmAAAA",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAwwCIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T19:09:47.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Models\\Article.cs",
               "RelativeDocumentMoniker": "WebUI\\Models\\Article.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\Models\\Article.cs",
               "RelativeToolTip": "WebUI\\Models\\Article.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T19:24:36.228Z"
+              "WhenOpened": "2024-06-22T19:24:36.228Z",
+              "EditorCaption": ""
             }
           ]
         }

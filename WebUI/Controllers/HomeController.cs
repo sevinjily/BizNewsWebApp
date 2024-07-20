@@ -22,15 +22,24 @@ namespace WebUI.Controllers
             var featuredArticles=_context.Articles
                 .Where(x=>x.IsFeatured==true&&x.IsDeleted==false)
                 .Include(x=>x.Category) 
-                .OrderByDescending(x=>x.UpdatedDate)
+                .OrderByDescending(x=>x.UpdatedDate)    
                 .Take(4).ToList();
+
+            var latestArticles = _context.Articles.ToList();
+
+
+            var trandingArticles = _context.Articles
+                .OrderByDescending(x => x.ViewCount).Take(5).ToList();
+
             HomeVM homeVM = new() 
             { 
-                FeaturedArticles=featuredArticles 
+                FeaturedArticles=featuredArticles ,
+                TrandingArticles=trandingArticles
             };
 
-            return View();
+            return View(homeVM);
         }
+      
 
         public IActionResult Privacy()
         {

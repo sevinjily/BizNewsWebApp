@@ -7425,6 +7425,62 @@
       "PackagePath": "staticwebassets\\admin\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\00037850-daf4-46ff-98dd-4e8f48e250acEthernet1.jpeg",
+      "PackagePath": "staticwebassets\\article-images\\00037850-daf4-46ff-98dd-4e8f48e250acEthernet1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\0dc113db-d2ac-431e-9b94-84fa7b78958aRomeoJuliet.jpg",
+      "PackagePath": "staticwebassets\\article-images\\0dc113db-d2ac-431e-9b94-84fa7b78958aRomeoJuliet.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\10fb5b27-16b9-4597-a144-ebd689a57f1epersianlessons.jpg",
+      "PackagePath": "staticwebassets\\article-images\\10fb5b27-16b9-4597-a144-ebd689a57f1epersianlessons.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\3b30566c-9384-409c-9604-24a86f7504d4Anthropoid_(film).png",
+      "PackagePath": "staticwebassets\\article-images\\3b30566c-9384-409c-9604-24a86f7504d4Anthropoid_(film).png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\49c1edc7-b01b-4e12-aac0-6c952c7ef4461b45eb35999271.Y3JvcCw3NTMsNTg5LDE3Myw1NQ.jpg",
+      "PackagePath": "staticwebassets\\article-images\\49c1edc7-b01b-4e12-aac0-6c952c7ef4461b45eb35999271.Y3JvcCw3NTMsNTg5LDE3Myw1NQ.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\5efeb069-0d74-474e-9988-3f858f46b85699a24554934617.Y3JvcCw0MDUsMzE3LDMwMCw4MQ.jpg",
+      "PackagePath": "staticwebassets\\article-images\\5efeb069-0d74-474e-9988-3f858f46b85699a24554934617.Y3JvcCw0MDUsMzE3LDMwMCw4MQ.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\800d5f94-d572-4c76-a04c-46b873edc5a6justin-maller-venom2560-4.jpg",
+      "PackagePath": "staticwebassets\\article-images\\800d5f94-d572-4c76-a04c-46b873edc5a6justin-maller-venom2560-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\94bd702a-aaa5-4d94-8e21-d906d50f2d57yasamsifresi.jpg",
+      "PackagePath": "staticwebassets\\article-images\\94bd702a-aaa5-4d94-8e21-d906d50f2d57yasamsifresi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\a57c6c13-d334-4f50-9b32-962e4cce444134ca70105190435(1).5f738d7851b8f.jpg",
+      "PackagePath": "staticwebassets\\article-images\\a57c6c13-d334-4f50-9b32-962e4cce444134ca70105190435(1).5f738d7851b8f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\a5c82e69-8026-4293-9135-1b84c278b9e6aclikoyunlarikuslarin.jpg",
+      "PackagePath": "staticwebassets\\article-images\\a5c82e69-8026-4293-9135-1b84c278b9e6aclikoyunlarikuslarin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\b935d3ce-5983-453c-93cb-343747b4f3fdAntropo.jpg",
+      "PackagePath": "staticwebassets\\article-images\\b935d3ce-5983-453c-93cb-343747b4f3fdAntropo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\c8e45671-6382-412c-bdfe-943f28344e004ce3b450227.5be4ea72992be.jpg",
+      "PackagePath": "staticwebassets\\article-images\\c8e45671-6382-412c-bdfe-943f28344e004ce3b450227.5be4ea72992be.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\cc6865bf-1c46-4daf-892e-4b05f19d57ae52cf77106763575.Y3JvcCw1NzcsNDUxLDI1NCwzMjM.jpg",
+      "PackagePath": "staticwebassets\\article-images\\cc6865bf-1c46-4daf-892e-4b05f19d57ae52cf77106763575.Y3JvcCw1NzcsNDUxLDI1NCwzMjM.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\fd0917dd-5772-49f7-abea-495f949627cazindanadasi.jpg",
+      "PackagePath": "staticwebassets\\article-images\\fd0917dd-5772-49f7-abea-495f949627cazindanadasi.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
