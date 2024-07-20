@@ -25,7 +25,11 @@ namespace WebUI.Controllers
                 .OrderByDescending(x=>x.UpdatedDate)    
                 .Take(4).ToList();
 
-            var latestArticles = _context.Articles.ToList();
+            var latestArticles = _context.Articles
+                .Where(x =>x.IsDeleted == false)
+                .Include(x => x.Category)
+                .OrderByDescending (x=>x.UpdatedDate)
+                .Take(13).ToList();
 
 
             var trandingArticles = _context.Articles
@@ -34,7 +38,8 @@ namespace WebUI.Controllers
             HomeVM homeVM = new() 
             { 
                 FeaturedArticles=featuredArticles ,
-                TrandingArticles=trandingArticles
+                TrandingArticles=trandingArticles,
+                LatestArticles=latestArticles
             };
 
             return View(homeVM);
