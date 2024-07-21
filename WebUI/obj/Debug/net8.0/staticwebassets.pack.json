@@ -7445,6 +7445,14 @@
       "PackagePath": "staticwebassets\\article-images\\49c1edc7-b01b-4e12-aac0-6c952c7ef4461b45eb35999271.Y3JvcCw3NTMsNTg5LDE3Myw1NQ.jpg"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\50d34211-3279-4479-81fb-556160ec4075Ophelia.jpg",
+      "PackagePath": "staticwebassets\\article-images\\50d34211-3279-4479-81fb-556160ec4075Ophelia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\5378d5c6-a4bd-43d6-b829-118ec82cb366Schindler'sList.jpg",
+      "PackagePath": "staticwebassets\\article-images\\5378d5c6-a4bd-43d6-b829-118ec82cb366Schindler'sList.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\article-images\\5efeb069-0d74-474e-9988-3f858f46b85699a24554934617.Y3JvcCw0MDUsMzE3LDMwMCw4MQ.jpg",
       "PackagePath": "staticwebassets\\article-images\\5efeb069-0d74-474e-9988-3f858f46b85699a24554934617.Y3JvcCw0MDUsMzE3LDMwMCw4MQ.jpg"
     },
@@ -7487,6 +7495,10 @@
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\css\\style.min.css",
       "PackagePath": "staticwebassets\\css\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\img\\Sevinj.jpg",
+      "PackagePath": "staticwebassets\\img\\Sevinj.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\BizNewsWebApp\\WebUI\\wwwroot\\img\\ads-728x90.png",

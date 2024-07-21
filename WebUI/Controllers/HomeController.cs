@@ -29,17 +29,17 @@ namespace WebUI.Controllers
                 .Where(x =>x.IsDeleted == false)
                 .Include(x => x.Category)
                 .OrderByDescending (x=>x.UpdatedDate)
-                .Take(13).ToList();
+                .ToList();
 
-
-            var trandingArticles = _context.Articles
-                .OrderByDescending(x => x.ViewCount).Take(5).ToList();
+                 var trandingArticles = _context.Articles
+                .Where(x => x.IsDeleted == false)
+                .OrderByDescending(x => x.ViewCount).ToList();
 
             HomeVM homeVM = new() 
             { 
                 FeaturedArticles=featuredArticles ,
                 TrandingArticles=trandingArticles,
-                LatestArticles=latestArticles
+                LatestArticles=latestArticles,
             };
 
             return View(homeVM);
