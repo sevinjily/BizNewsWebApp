@@ -1,4 +1,6 @@
 ﻿@using System.Security.Claims
+@using System.Globalization
+@model DetailVM
 <!DOCTYPE html>
 <html lang="en">
 
@@ -157,14 +159,18 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
+                @for (int i = 0; i < 3; i++)
+                {
+                    
                 <div class="mb-3">
                     <div class="mb-2">
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">@Model.TrandingArticle[i].Category.CategoryName</a>
+                        <a class="text-body" href=""><small>@Model.TrandingArticle[i].CreatedDate.ToString("d MMMM,yyy",new CultureInfo("az"))</small></a>
                     </div>
-                    <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
+                        <a class="small text-body text-uppercase font-weight-medium" href="/article/detail/@Model.TrandingArticle[i].Id/@Model.TrandingArticle[i].SeoUrl">@Model.TrandingArticle[i].Title</a>
                 </div>
-                <div class="mb-3">
+                }
+               @*  <div class="mb-3">
                     <div class="mb-2">
                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
                         <a class="text-body" href=""><small>Jan 01, 2045</small></a>
@@ -177,7 +183,7 @@
                         <a class="text-body" href=""><small>Jan 01, 2045</small></a>
                     </div>
                     <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-                </div>
+                </div> *@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
