@@ -4,6 +4,7 @@ namespace WebUI.ViewModel
 {
     public class HomeVM
     {
+
         public List<Article> FeaturedArticles { get; set; }
         public List<Article> TrandingArticles { get; set; }
 

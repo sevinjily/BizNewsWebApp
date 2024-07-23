@@ -1,5 +1,4 @@
-﻿@using System.Globalization
-@model DetailVM
+﻿@model DetailVM
 
 
   <!-- Breaking News Start -->
@@ -34,7 +33,7 @@
                         <div class="mb-3">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                href="">@Model.Article.Category.CategoryName</a>
-                            <a class="text-body" href="">@Model.Article.CreatedDate.ToString("d MMMM,yyy",new CultureInfo("az"))</a>
+                            <a class="text-body" href="">@Model.Article.CreatedDate.ToString("d MMMM,yyy",new System.Globalization.CultureInfo("az"))</a>
                         </div>
                         <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">@Model.Article.Title</h1>
                         <p>
@@ -122,16 +121,7 @@
                                 <label for="website">Website</label>
                                 <input type="url" class="form-control" id="website">
                             </div>
-
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group mb-0">
-                                <input type="submit" value="Leave a comment"
-                                       class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                            </div>
-                        </form>
+                            </form>
                     </div>
                 </div>
                 <!-- Comment Form End -->
@@ -187,7 +177,7 @@
                         <h4 class="m-0 text-uppercase font-weight-bold">Tranding News</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-3">
-                        @foreach (var item in Model.TrandingArticle)
+                        @foreach (var item in Model.TrandingArticles)
                         {
                             
                         <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
@@ -195,9 +185,9 @@
                             <div class="w-50 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">@item.Category.CategoryName</a>
-                                    <a class="text-body" href=""><small>@item.CreatedDate.ToString("d MMMM,yyy",new CultureInfo("az"))</small></a>
                                 </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="/article/detail/@item.Id/@item.SeoUrl">@item.Title.Substring(0, 15)...</a>
+                                    <a class="text-body" href=""><small>@item.CreatedDate.ToString("d MMMM,yyy",new System.Globalization.CultureInfo("az"))</small></a>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="/article/detail/@item.Id/@item.SeoUrl">@item.Title.Substring(0,10)...</a>
                             </div>
                         </div>
                         }

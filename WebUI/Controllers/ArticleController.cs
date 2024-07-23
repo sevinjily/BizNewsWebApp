@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebUI.Data;
-using WebUI.Models;
 using WebUI.ViewModel;
 
 namespace WebUI.Controllers
@@ -18,26 +17,22 @@ namespace WebUI.Controllers
 
         public IActionResult Detail(Guid id)
         {
+            var article = _context.Articles
+            .Include(x => x.Category)
+            .Include(x => x.ArticleTags)
+            .ThenInclude(x => x.Tag)
+            .FirstOrDefault(x => x.Id == id);
            
 
-
-            var article=_context.Articles
-                .Include(x=>x.Category)
-                .Include(x=>x.ArticleTags)
-                .ThenInclude(x=>x.Tag)
-                .FirstOrDefault(x=>x.Id==id);
-
-
-
             var cookie = _contextAccessor.HttpContext.Request.Cookies["Views"];
-            string[] findCookie = {""};
+            string[] findCookie = { "" };
 
             if (cookie != null)
             {
                 findCookie = cookie.Split('/').ToArray();
             }
 
-            if (!findCookie.Contains(article.Id.ToString())) 
+            if (!findCookie.Contains(article.Id.ToString()))
             {
                 Response.Cookies.Append($"Views", $"{cookie}/{article.Id}", new CookieOptions
                 {
@@ -45,21 +40,22 @@ namespace WebUI.Controllers
                     HttpOnly = true,
                     Expires = DateTime.Now.AddSeconds(10)
                 });
-            article.ViewCount += 1;
-            _context.Articles.Update(article);
-            _context.SaveChanges();
+                article.ViewCount += 1;
+                _context.Articles.Update(article);
+                _context.SaveChanges();
             }
 
             var trandingArticles = _context.Articles
-                .Include(x=>x.Category)
+                .Include(x => x.Category)
                 .OrderByDescending(x => x.ViewCount).Take(5).ToList();
             DetailVM detailVM = new()
             {
-                Article=article,
-                TrandingArticle = trandingArticles,
+                Article = article,
+                TrandingArticles = trandingArticles,
             };
 
             return View(detailVM);
         }
+     
     }
 }

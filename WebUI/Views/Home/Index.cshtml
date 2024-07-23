@@ -16,7 +16,7 @@
                                    href="">@Model.LatestArticles[i].Category.CategoryName</a>
                                 <a class="text-white" href="">@Model.LatestArticles[i].CreatedDate.ToString("d MMMM,yyy", new CultureInfo("az"))</a>
                         </div>
-                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="/article/detail/@Model.LatestArticles[i].Id/@Model.LatestArticles[i].SeoUrl">@Model.LatestArticles[i].Title</a>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold"  asp-controller="Article" asp-action="Detail" asp-route-id="@Model.TrandingArticles[i].Id" asp-route-seoUrl="@Model.TrandingArticles[i].SeoUrl"> @Model.LatestArticles[i].Title</a>
                     </div>
                 </div>
                 }
@@ -70,49 +70,7 @@
                     </div>
                 </div>
                 }
-                
-                    
-                
-              @*   <div class="col-md-6 px-0">
-                    <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="~/img/news-700x435-2.jpg" style="object-fit: cover;">
-                        <div class="overlay">
-                            <div class="mb-2">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                   href="">Business</a>
-                                <a class="text-white" href=""><small>Jan 01, 2045</small></a>
-                            </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-md-6 px-0">
-                    <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="~/img/news-700x435-3.jpg" style="object-fit: cover;">
-                        <div class="overlay">
-                            <div class="mb-2">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                   href="">Business</a>
-                                <a class="text-white" href=""><small>Jan 01, 2045</small></a>
-                            </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 px-0">
-                    <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="~/img/news-700x435-4.jpg" style="object-fit: cover;">
-                        <div class="overlay">
-                            <div class="mb-2">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                   href="">Business</a>
-                                <a class="text-white" href=""><small>Jan 01, 2045</small></a>
-                            </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                        </div>
-                    </div>
-                </div> *@
-            </div>
         </div>
     </div>
 </div>
