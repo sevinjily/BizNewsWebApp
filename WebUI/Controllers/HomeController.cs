@@ -35,14 +35,17 @@ namespace WebUI.Controllers
                 .Where(x => x.IsDeleted == false)
                 .OrderByDescending(x => x.ViewCount).ToList();
 
+            var tags = _context.Tags.ToList();
+
             HomeVM homeVM = new() 
             { 
                 FeaturedArticles=featuredArticles ,
                 TrandingArticles=trandingArticles,
                 LatestArticles=latestArticles,
+                Tags=tags
             };
 
-            return View(homeVM);
+            return View(homeVM);    
         }
       
 
