@@ -22,18 +22,21 @@ namespace WebUI.Controllers
             var featuredArticles=_context.Articles
                 .Where(x=>x.IsFeatured==true&&x.IsDeleted==false)
                 .Include(x=>x.Category) 
-                .OrderByDescending(x=>x.UpdatedDate)    
+                .OrderByDescending(x=>x.CreatedDate)    
                 .Take(4).ToList();
 
             var latestArticles = _context.Articles
                 .Where(x =>x.IsDeleted == false)
                 .Include(x => x.Category)
-                .OrderByDescending (x=>x.UpdatedDate)
+                .OrderByDescending(x => x.CreatedDate)
+                
                 .ToList();
 
                  var trandingArticles = _context.Articles
                 .Where(x => x.IsDeleted == false)
-                .OrderByDescending(x => x.ViewCount).ToList();
+                .OrderByDescending(x => x.ViewCount)
+                .Take(4)
+                .ToList();
 
             var tags = _context.Tags.ToList();
 

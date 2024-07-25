@@ -6,5 +6,7 @@ namespace WebUI.ViewModel
     {
         public Article Article{ get; set; }
         public List<Article> TrandingArticles { get; set; }
+        public List<Tag> Tags { get; set; }
+
     }
 }

@@ -16,7 +16,7 @@
                                    href="">@Model.LatestArticles[i].Category.CategoryName</a>
                                 <a class="text-white" href="">@Model.LatestArticles[i].CreatedDate.ToString("d MMMM,yyy", new CultureInfo("az"))</a>
                         </div>
-                            <a class="h2 m-0 text-white text-uppercase font-weight-bold"  asp-controller="Article" asp-action="Detail" asp-route-id="@Model.TrandingArticles[i].Id" asp-route-seoUrl="@Model.TrandingArticles[i].SeoUrl"> @Model.LatestArticles[i].Title</a>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold"  asp-controller="Article" asp-action="Detail" asp-route-id="@Model.LatestArticles[i].Id" asp-route-seoUrl="@Model.LatestArticles[i].SeoUrl"> @Model.LatestArticles[i].Title</a>
                     </div>
                 </div>
                 }

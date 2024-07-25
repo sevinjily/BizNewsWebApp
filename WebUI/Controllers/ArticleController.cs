@@ -47,11 +47,15 @@ namespace WebUI.Controllers
 
             var trandingArticles = _context.Articles
                 .Include(x => x.Category)
-                .OrderByDescending(x => x.ViewCount).Take(5).ToList();
+                .OrderByDescending(x => x.ViewCount).Take(4).ToList();
+
+            var tags = _context.Tags.ToList();
+
             DetailVM detailVM = new()
             {
                 Article = article,
                 TrandingArticles = trandingArticles,
+                Tags = tags
             };
 
             return View(detailVM);
