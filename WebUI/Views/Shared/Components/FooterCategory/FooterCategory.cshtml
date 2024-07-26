@@ -1,0 +1,13 @@
+﻿@model List<Category>
+
+<div class="col-lg-3 col-md-6 mb-5">
+    <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
+    <div class="m-n1">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <a asp-controller="Category" asp-action="Index" asp-route-id="@Model[i].Id" class="btn btn-sm btn-secondary m-1">@Model[i].CategoryName</a>
+            
+        }
+
+    </div>
+</div>

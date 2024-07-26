@@ -1,0 +1,25 @@
+﻿@model List<Article>
+
+<div class="col-lg-3 col-md-6 mb-5">
+    <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
+    @{
+        var popularArticles = Model.OrderByDescending(x => x.ViewCount).Take(3);
+        foreach (var item in popularArticles)
+        {
+            
+            <div class="mb-3">
+        <div class="mb-2">
+            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">@item.Category.CategoryName</a>
+            <a class="text-body" href=""><small>@item.CreatedDate.ToString("d MMMM,yyy",new System.Globalization.CultureInfo("az"))</small></a>
+        </div>
+        <a class="small text-body text-uppercase font-weight-medium" href="#">@item.Title</a>
+    </div>
+        }
+    }
+  
+
+    
+
+
+  
+</div>
