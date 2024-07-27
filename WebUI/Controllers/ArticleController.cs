@@ -51,32 +51,72 @@ namespace WebUI.Controllers
                 .Include(x => x.Category)
                 .OrderByDescending(x => x.ViewCount).Take(4).ToList();
 
+
+            var articleComment = _context.ArticleComments
+                .Include(x=>x.User)
+                .Include(x => x.Article)
+                .Where(x=>x.ArticleId== article.Id)
+                .ToList();
+
             var tags = _context.Tags.ToList();
 
             DetailVM detailVM = new()
             {
                 Article = article,
                 TrandingArticles = trandingArticles,
-                Tags = tags
+                Tags = tags,
+                ArticleComments=articleComment
             };
 
             return View(detailVM);
         }
         public async Task<IActionResult> AddComment(string content,Guid articleId)
         {
-            var userId=  _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var userId= _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var username =  _contextAccessor.HttpContext.User.Identity.Name;
+          
             ArticleComment articleComment = new()
             {
                 Content = content,
                 CreatedDate = DateTime.Now,
                 UserId = userId,
-                ArticleId = articleId
+                ArticleId = articleId,
+                CreatedBy=username
 
             };
            await _context.ArticleComments.AddAsync(articleComment);
             await _context.SaveChangesAsync();
             return RedirectToAction("Detail", "Article", new {Id=articleId});
 
+        }
+        //[HttpPost]
+        //public IActionResult DeleteComment(Guid commentId)
+        //{
+        //   var comment=_context.ArticleComments.FirstOrDefault(x=>x.Id==commentId);
+        //    _context.ArticleComments.Remove(comment);
+        //    _context.SaveChanges();
+        //    return View();
+        //}
+      
+     
+        public IActionResult Delete(Guid commentId, Guid ArticleId)
+        {
+            var articleComment = _context.ArticleComments
+        .Include(ac => ac.Article)
+        .FirstOrDefault(x => x.Id == commentId);
+
+            if (articleComment != null)
+            {
+                _context.ArticleComments.Remove(articleComment);
+                _context.SaveChanges();
+                return RedirectToAction("Detail", "Article", new { Id = ArticleId });
+            }
+            else
+            {
+                // Handle the situation where the article comment is not found
+                // For example, you can return a NotFound result
+                return NotFound();
+            }
         }
 
     }

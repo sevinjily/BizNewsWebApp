@@ -236,7 +236,6 @@ namespace WebUI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhotoUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
