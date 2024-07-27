@@ -26,12 +26,9 @@ namespace WebUI.Controllers
                 .Where(x => x.IsDeleted==false && x.ArticleTags.Any(at => at.TagId == tagId))
                 .ToList();
 
-            TagDetailVM tagDetailVM = new()
-            {
-                TagArticles = tagArticles,
-            };
+         
 
-            return View(tagDetailVM);
+            return View(tagArticles);
         }
     }
 }

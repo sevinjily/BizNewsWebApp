@@ -1,5 +1,6 @@
 ﻿using Azure;
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
 using WebUI.Data;
 using WebUI.Models;
 
@@ -59,12 +60,33 @@ namespace WebUI.Areas.Admin.Controllers
         public IActionResult Edit(Category category) 
         {
             var findCategory = _context.Categories.FirstOrDefault(x => x.CategoryName == category.CategoryName);
-            if (findCategory != null)
+            bool checkCategoryName = true;
+            byte[] AsciibytesUI = Encoding.ASCII.GetBytes(category.CategoryName);
+            byte[] AsciibytesDb = Encoding.ASCII.GetBytes(findCategory.CategoryName);
+            if (category.CategoryName == findCategory.CategoryName)
+            {
+
+                for (int i = 0; i < category.CategoryName.Length; i++)
+                {
+                    if (AsciibytesUI[i] != AsciibytesDb[i])
+                    {
+                        checkCategoryName = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                checkCategoryName = false;
+            }
+
+            if (checkCategoryName)
             {
                 ViewBag.Error = "This category name is already exists!";
                 return View(findCategory);
             }
-            _context.Categories.Update(category);
+                    findCategory.CategoryName = category.CategoryName;
+            _context.Categories.Update(findCategory);
                 _context.SaveChanges();
             return Redirect("/admin/category/index");
         }
@@ -72,6 +94,7 @@ namespace WebUI.Areas.Admin.Controllers
         public IActionResult Delete(Guid id)
         {
             var findCategories = _context.Categories.FirstOrDefault(x => x.Id == id);
+
             if (findCategories == null)
             {
                 return NotFound();

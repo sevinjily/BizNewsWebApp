@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using WebUI.Data;
+using WebUI.Models;
 using WebUI.ViewModel;
 
 namespace WebUI.Controllers
@@ -60,6 +62,22 @@ namespace WebUI.Controllers
 
             return View(detailVM);
         }
-     
+        public async Task<IActionResult> AddComment(string content,Guid articleId)
+        {
+            var userId=  _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ArticleComment articleComment = new()
+            {
+                Content = content,
+                CreatedDate = DateTime.Now,
+                UserId = userId,
+                ArticleId = articleId
+
+            };
+           await _context.ArticleComments.AddAsync(articleComment);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Detail", "Article", new {Id=articleId});
+
+        }
+
     }
 }

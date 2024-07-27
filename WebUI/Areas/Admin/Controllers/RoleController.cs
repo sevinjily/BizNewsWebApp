@@ -28,10 +28,6 @@ namespace WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Create(IdentityRole role)
         {
            
-            //if(!ModelState.IsValid)
-            //{
-            //    return View();
-            //}
             if (string.IsNullOrEmpty(role.Name))
             {
                 ViewBag.Name = "Role name is required!";

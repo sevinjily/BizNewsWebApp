@@ -143,7 +143,7 @@ namespace WebUI.Areas.Admin.Controllers
            
             return View(article);
         }   
-        //todo Seo,Comment
+       
         [HttpPost]
         public async Task<IActionResult> Edit(Article article,IFormFile file,List<Guid> tagIds)
         {

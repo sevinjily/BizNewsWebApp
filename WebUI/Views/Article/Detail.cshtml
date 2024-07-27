@@ -102,26 +102,23 @@
                         <h4 class="m-0 text-uppercase font-weight-bold">Leave a comment</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-4">
-                        <form>
-                            <div class="form-row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="name">Name *</label>
-                                        <input type="text" class="form-control" id="name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email *</label>
-                                        <input type="email" class="form-control" id="email">
-                                    </div>
-                                </div>
-                            </div>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            
+                        <form class="form-wrapper" asp-controller="Article"asp-action="AddComment" method="post">
+                           
                             <div class="form-group">
-                                <label for="website">Website</label>
-                                <input type="url" class="form-control" id="website">
+                                <input type="hidden" asp-for="Article.Id" name="ArticleId"/>
+                                <textarea class="form-control" placeholder="Your comment"></textarea>
+                                <button type="submit" class="btn btn-info">Submit Comment</button>
                             </div>
                             </form>
+                        }
+                        else
+                        {
+                            <a href="/auth/login?controller=Article&action=Detail&id=@Model.Article.Id&seoUrl=@Model.Article.SeoUrl"
+                            class="btn btn-info">Login</a>
+                        }
                     </div>
                 </div>
                 <!-- Comment Form End -->

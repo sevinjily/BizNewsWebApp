@@ -10,13 +10,15 @@ namespace WebUI.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IHttpContextAccessor _contextAccessor;
 
-        public AuthController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AuthController(UserManager<User> userManager, SignInManager<User> signInManager, IHttpContextAccessor contextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _contextAccessor = contextAccessor;
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]   
         public IActionResult Register()
         {
@@ -39,7 +41,7 @@ namespace WebUI.Controllers
             IdentityResult  identityResult= await _userManager.CreateAsync(newUser,registerDTO.Password);
             if(identityResult.Succeeded)
             {
-                return RedirectToAction("Index","Home");
+                               return RedirectToAction("Index","Home");
             }
             else
             {
@@ -72,6 +74,15 @@ namespace WebUI.Controllers
             Microsoft.AspNetCore.Identity.SignInResult signInResult= await _signInManager.PasswordSignInAsync(findUser, loginDTO.Password,loginDTO.RememberMe,false);
             if(signInResult.Succeeded)
             {
+                var c = _contextAccessor.HttpContext.Request.Query["controller"];
+                var a = _contextAccessor.HttpContext.Request.Query["action"];
+                var id = _contextAccessor.HttpContext.Request.Query["id"];
+                var seoUrl = _contextAccessor.HttpContext.Request.Query["seoUrl"];
+                if (!string.IsNullOrEmpty(c))
+                {
+                    return RedirectToAction(a, c, new { Id = id, SeoUrl = seoUrl });
+
+                }
                 return RedirectToAction("Index", "Home");
             }
             else
