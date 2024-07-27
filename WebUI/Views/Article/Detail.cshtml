@@ -64,7 +64,7 @@
                         <div class="media mb-4">
                           
                             <div class="media-body">
-                                    <h6><a class="text-secondary font-weight-bold" name="CreatedBy" href="">@item.User.FirstName @item.User.LastName</a> <small><i>@item.CreatedDate.ToString("d MMMM,yyy mm:ss:hh", new System.Globalization.CultureInfo("az"))</i></small></h6>
+                                    <h6><a class="text-secondary font-weight-bold" name="CreatedBy" href="">@item.User.FirstName @item.User.LastName</a> <small><i>@item.CreatedDate.ToString("d MMMM,yyy hh:ss:mm", new System.Globalization.CultureInfo("az"))</i></small></h6>
                                 <p>
                                     @item.Content
                                 </p>
@@ -72,11 +72,11 @@
                             </div>
                             <div>
                                     <form asp-controller="Article" asp-action="Delete" method="post">
-                                        <input type="hidden" asp-for="@Model.Article.Id" name="ArticleId" />
-                                        <input type="hidden" asp-for="@item.Id" />
+                                        <input type="hidden" value="@Model.Article.Id" name="ArticleId" />
+                                        <input type="hidden" name="commentId" value="@item.Id" />
                                         <button class="btn btn-danger">Delete</button>
                                     </form>
-                            </div>
+                            </div>  
                         </div>
                         }
                     </div>

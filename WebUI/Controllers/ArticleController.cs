@@ -109,14 +109,9 @@ namespace WebUI.Controllers
             {
                 _context.ArticleComments.Remove(articleComment);
                 _context.SaveChanges();
+            }
                 return RedirectToAction("Detail", "Article", new { Id = ArticleId });
-            }
-            else
-            {
-                // Handle the situation where the article comment is not found
-                // For example, you can return a NotFound result
-                return NotFound();
-            }
+           
         }
 
     }
