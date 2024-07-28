@@ -47,7 +47,7 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <span class="ml-3"><i class="far fa-eye mr-2"></i>@Model.Article.ViewCount</span>
-                            <span class="ml-3"><i class="far fa-comment mr-2"></i>123</span>
+                            <span class="ml-3"><i class="far fa-comment mr-2"></i>@Model.ArticleComments.Count</span>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                                 <button class="btn btn-sm btn-outline-secondary">Reply</button>
                             </div>
                             <div>
-                                    <form asp-controller="Article" asp-action="Delete" method="post">
+                                    <form asp-controller="Article" asp-action="DeleteComment" method="post">
                                         <input type="hidden" value="@Model.Article.Id" name="ArticleId" />
                                         <input type="hidden" name="commentId" value="@item.Id" />
                                         <button class="btn btn-danger">Delete</button>
@@ -184,7 +184,7 @@
                         </div>
                         }
                       
-                    </div>
+                 
                 </div>
                 <!-- Popular News End -->
                 <!-- Newsletter Start -->

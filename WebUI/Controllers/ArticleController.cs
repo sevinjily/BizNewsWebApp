@@ -72,34 +72,32 @@ namespace WebUI.Controllers
         }
         public async Task<IActionResult> AddComment(string content,Guid articleId)
         {
+          
             var userId= _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var username =  _contextAccessor.HttpContext.User.Identity.Name;
-          
+            
+           
+
             ArticleComment articleComment = new()
             {
                 Content = content,
                 CreatedDate = DateTime.Now,
                 UserId = userId,
                 ArticleId = articleId,
-                CreatedBy=username
+                CreatedBy=username,
+               
 
             };
-           await _context.ArticleComments.AddAsync(articleComment);
+         
+            await _context.ArticleComments.AddAsync(articleComment);
             await _context.SaveChangesAsync();
             return RedirectToAction("Detail", "Article", new {Id=articleId});
 
         }
-        //[HttpPost]
-        //public IActionResult DeleteComment(Guid commentId)
-        //{
-        //   var comment=_context.ArticleComments.FirstOrDefault(x=>x.Id==commentId);
-        //    _context.ArticleComments.Remove(comment);
-        //    _context.SaveChanges();
-        //    return View();
-        //}
+        
       
      
-        public IActionResult Delete(Guid commentId, Guid ArticleId)
+        public IActionResult DeleteComment(Guid commentId, Guid ArticleId)
         {
             var articleComment = _context.ArticleComments
         .Include(ac => ac.Article)
