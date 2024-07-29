@@ -251,6 +251,39 @@ namespace WebUI.Migrations
                     b.ToTable("ArticleComments");
                 });
 
+            modelBuilder.Entity("WebUI.Models.ArticleCommentReply", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ArticleCommentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArticleCommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ArticleCommentReplies");
+                });
+
             modelBuilder.Entity("WebUI.Models.ArticleTag", b =>
                 {
                     b.Property<Guid>("Id")
@@ -452,6 +485,25 @@ namespace WebUI.Migrations
                         .IsRequired();
 
                     b.Navigation("Article");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebUI.Models.ArticleCommentReply", b =>
+                {
+                    b.HasOne("WebUI.Models.ArticleComment", "ArticleComment")
+                        .WithMany()
+                        .HasForeignKey("ArticleCommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebUI.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ArticleComment");
 
                     b.Navigation("User");
                 });

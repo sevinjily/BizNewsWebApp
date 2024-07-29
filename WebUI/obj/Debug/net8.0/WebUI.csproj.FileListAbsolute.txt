@@ -277,8 +277,6 @@ C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.A
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -368,14 +366,11 @@ C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.E
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Features.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -531,7 +526,6 @@ C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Text
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Text.Encoding.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Text.Encoding.Extensions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Text.Encodings.Web.dll
-C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Text.Json.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Text.RegularExpressions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Threading.Channels.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Threading.dll
@@ -562,3 +556,8 @@ C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\System.Xml.
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\refs\WindowsBase.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Asus\source\repos\BizNewsWebApp\WebUI\bin\Debug\net8.0\System.Text.Json.dll
