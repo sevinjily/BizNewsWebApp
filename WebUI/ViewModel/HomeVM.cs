@@ -10,5 +10,7 @@ namespace WebUI.ViewModel
 
         public List<Article> LatestArticles { get; set; }
         public List<Tag> Tags { get; set; }
+        public Dictionary<Guid, int> ArticleCommentCounts { get; set; }
+
     }
 }

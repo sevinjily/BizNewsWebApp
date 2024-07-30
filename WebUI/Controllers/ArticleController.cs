@@ -111,6 +111,22 @@ namespace WebUI.Controllers
                 return RedirectToAction("Detail", "Article", new { Id = ArticleId });
            
         }
+        public async  Task<IActionResult> ReplyComment(Guid commentId,string content)
+        {
+            var userId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var username = _contextAccessor.HttpContext.User.Identity.Name;
+            ArticleCommentReply articleCommentReply = new()
+            {
+                CreatedDate = DateTime.Now,
+                UserId = userId,
+                CreatedBy = username,
+                Content = content,
+                ArticleCommentId = commentId
+            };
+            await _context.ArticleCommentReplies.AddAsync(articleCommentReply);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Detail", "Article", new { Id = commentId });
+        }
 
     }
 }

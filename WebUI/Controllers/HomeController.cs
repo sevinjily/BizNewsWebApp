@@ -40,12 +40,19 @@ namespace WebUI.Controllers
 
             var tags = _context.Tags.ToList();
 
+            var articleCommentCounts = _context.ArticleComments
+      .GroupBy(x => x.ArticleId)
+      .ToDictionary(x => x.Key, x => x.Count());
+
+
             HomeVM homeVM = new() 
             { 
                 FeaturedArticles=featuredArticles ,
                 TrandingArticles=trandingArticles,
                 LatestArticles=latestArticles,
-                Tags=tags
+                Tags=tags,
+                ArticleCommentCounts = articleCommentCounts,
+
             };
 
             return View(homeVM);    
