@@ -7,7 +7,7 @@ namespace WebUI.Areas.Admin.Controllers
     public class DashboardController : Controller
     {
 
-        [Authorize(Roles = "Admin,Super Admin,Admin Editor")]
+        //[Authorize(Roles = "Admin,Super Admin,Admin Editor")]
 
         public IActionResult Index()
         {

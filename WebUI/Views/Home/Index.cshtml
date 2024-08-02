@@ -36,7 +36,7 @@
                                        href="">@Model.TrandingArticles[i].Category.CategoryName</a>
                                 <a class="text-white" href=""><small>@Model.TrandingArticles[i].CreatedDate.ToString("d MMMM,yyy",new CultureInfo("az"))</small></a>
                             </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="/article/detail/@Model.TrandingArticles[i].Id/@Model.TrandingArticles[i].SeoUrl">@Model.TrandingArticles[i].Title</a>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="/article/detail/@Model.TrandingArticles[i].Id/@Model.TrandingArticles[i].SeoUrl">@Model.TrandingArticles[i].Title.Substring(0,10)...</a>
                         </div>
                     </div>
                 </div>
@@ -55,8 +55,12 @@
                     <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">Breaking News</div>
                     <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                          style="width: calc(100% - 170px); padding-right: 90px;">
-                        <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div>
-                        <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div>
+                         @foreach (var item in Model.LatestArticles.Take(2))
+                        {
+
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="/article/detail/@item.Id/@item.SeoUrl">@Html.Raw(item.Content.Substring(0, 200))...</a></div>
+                        }
+                        
                     </div>
                 </div>
             </div>
@@ -107,7 +111,7 @@
                         </div>
                        
                     </div>
-                    @for (int i = 0; i < Model.LatestArticles.Count; i++)
+                    @for (int i = 0; i < 8; i++)
                     {
                         
                     <div class="col-lg-6">
@@ -121,7 +125,7 @@
                                 </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="/article/detail/@Model.LatestArticles[i].Id/@Model.LatestArticles[i].SeoUrl">@Model.LatestArticles[i].Title</a>
                                 <p class="m-0">
-                                        @Html.Raw(Model.LatestArticles[i].Content.Substring(0, 180))...
+                                        @Html.Raw(Model.LatestArticles[i].Content.Substring(0, 150))...
                                 </p>
                             </div>
                             <div class="d-flex justify-content-between bg-white border border-top-0 p-4">

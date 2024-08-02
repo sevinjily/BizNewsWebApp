@@ -27,5 +27,6 @@ namespace WebUI.Controllers
            
             return View (categoryArticles);
         }
+        
     }
 }

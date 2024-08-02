@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using WebUI.Data;
@@ -11,6 +12,7 @@ namespace WebUI.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IHttpContextAccessor _contextAccessor;
+        private readonly UserManager<User> _userManager;
         public ArticleController(AppDbContext context, IHttpContextAccessor contextAccessor)
         {
             _context = context;
@@ -59,13 +61,14 @@ namespace WebUI.Controllers
                 .ToList();
 
             var tags = _context.Tags.ToList();
+           
 
             DetailVM detailVM = new()
             {
                 Article = article,
                 TrandingArticles = trandingArticles,
                 Tags = tags,
-                ArticleComments=articleComment
+                ArticleComments=articleComment,
             };
 
             return View(detailVM);
@@ -111,22 +114,13 @@ namespace WebUI.Controllers
                 return RedirectToAction("Detail", "Article", new { Id = ArticleId });
            
         }
-        public async  Task<IActionResult> ReplyComment(Guid commentId,string content)
+        public async Task<IActionResult> AddReply(CommentReply reply)
         {
-            var userId = _contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var username = _contextAccessor.HttpContext.User.Identity.Name;
-            ArticleCommentReply articleCommentReply = new()
-            {
-                CreatedDate = DateTime.Now,
-                UserId = userId,
-                CreatedBy = username,
-                Content = content,
-                ArticleCommentId = commentId
-            };
-            await _context.ArticleCommentReplies.AddAsync(articleCommentReply);
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Detail", "Article", new { Id = commentId });
+          
+            _context.CommentReplies.Add(reply);
+            _context.SaveChanges();
+            return RedirectToAction("Detail", new { id = reply.ArticleComment.ArticleId });
         }
 
     }
-}
+}   

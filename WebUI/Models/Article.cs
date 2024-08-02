@@ -21,5 +21,9 @@ namespace WebUI.Models
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
         public string SeoUrl { get; set; }
+        public List<ArticleComment> ArticleComments { get; set; }
+        public List<CommentReply> CommentReplies { get; set; }
+
+
     }
 }

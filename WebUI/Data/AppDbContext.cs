@@ -6,15 +6,17 @@ namespace WebUI.Data
 {
     public class AppDbContext : IdentityDbContext<User, IdentityRole, string>
     {
-             public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
 
         public DbSet<Article> Articles { get; set; }
         public DbSet<ArticleTag> ArticleTags { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ArticleComment> ArticleComments { get; set; }
-        public DbSet<ArticleCommentReply> ArticleCommentReplies { get; set; }
+        public DbSet<CommentReply> CommentReplies { get; set; }
+        public DbSet<User> Users { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -22,20 +24,44 @@ namespace WebUI.Data
             base.OnModelCreating(builder);
             builder.Entity<User>().ToTable("Users");
             builder.Entity<IdentityRole>().ToTable("Roles");
+
+            builder.Entity<CommentReply>()
+                       .HasOne(cr => cr.User)
+                       .WithMany(u => u.CommentReplies)
+                       .HasForeignKey(cr => cr.UserId)
+                       .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<CommentReply>()
+                   .HasOne(cr => cr.Article)
+                   .WithMany(a => a.CommentReplies)
+                   .HasForeignKey(cr => cr.ArticleId)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<CommentReply>()
+                   .HasOne(cr => cr.ArticleComment)
+                   .WithMany(ac => ac.CommentReplies)
+                   .HasForeignKey(cr => cr.ArticleCommentId)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<ArticleComment>()
+                 .HasOne(ac => ac.Article)
+                 .WithMany(a => a.ArticleComments)
+                 .HasForeignKey(ac => ac.ArticleId)
+                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<ArticleComment>()
+                   .HasOne(ac => ac.User)
+                   .WithMany(u => u.ArticleComments)
+                   .HasForeignKey(ac => ac.UserId)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+          builder.Entity<CommentReply>()
+                .HasOne(b=>b.Article)
+                .WithMany(b => b.CommentReplies)
+                .HasForeignKey(c=>c.ArticleId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
         }
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<ArticleCommentReply>()
-        //        .HasRequired(acr => acr.ArticleComment)
-        //        .WithMany(ac => ac.ArticleCommentReplies)
-        //        .HasForeignKey(acr => acr.ArticleCommentId);
-
-        //    modelBuilder.Entity<ArticleCommentReply>()
-        //        .HasRequired(acr => acr.User)
-        //        .WithMany(u => u.ArticleCommentReplies)
-        //        .HasForeignKey(acr => acr.UserId);
-        //}
-
     }
 }

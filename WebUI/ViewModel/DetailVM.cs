@@ -9,5 +9,6 @@ namespace WebUI.ViewModel
         public List<Tag> Tags { get; set; }
         public List<ArticleComment> ArticleComments { get; set; }
 
+
     }
 }
