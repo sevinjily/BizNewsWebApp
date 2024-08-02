@@ -7,8 +7,7 @@
         <img class="img-fluid w-100" src="@item.Article.PhotoUrl" style="object-fit: cover;">
         <div class="bg-white border border-top-0 p-4">
             <div class="mb-2">
-               @*  <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                   href="">@item.Category.CategoryName</a>   *@
+               
                     <a class="text-body" href=""><small>@item.Article.CreatedDate.ToString("d MMMM,yyy", new System.Globalization.CultureInfo("az"))</small></a>
             </div>
                 <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="/article/detail/@item.Article.Id/@item.Article.SeoUrl">@item.Article.Title</a>
