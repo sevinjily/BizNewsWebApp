@@ -97,19 +97,27 @@ namespace WebUI.Controllers
             return RedirectToAction("Detail", "Article", new {Id=articleId});
 
         }
-        
-      
-     
+
+
+
         public IActionResult DeleteComment(Guid commentId, Guid ArticleId)
         {
+
             var articleComment = _context.ArticleComments
         .Include(ac => ac.Article)
         .FirstOrDefault(x => x.Id == commentId);
 
             if (articleComment != null)
             {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var isAdmin = User.IsInRole("Admin");
+                if (articleComment.CreatedBy == userId || isAdmin)
+                {
+
                 _context.ArticleComments.Remove(articleComment);
                 _context.SaveChanges();
+                }
+
             }
                 return RedirectToAction("Detail", "Article", new { Id = ArticleId });
            
