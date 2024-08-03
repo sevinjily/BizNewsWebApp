@@ -12,7 +12,7 @@
             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">@item.Category.CategoryName</a>
             <a class="text-body" href=""><small>@item.CreatedDate.ToString("d MMMM,yyy",new System.Globalization.CultureInfo("az"))</small></a>
         </div>
-        <a class="small text-body text-uppercase font-weight-medium" href="#">@item.Title</a>
+        <a class="small text-body text-uppercase font-weight-medium" href="/article/detail/@item.Id/@item.SeoUrl">@item.Title</a>
     </div>
         }
     }

@@ -23,6 +23,7 @@ namespace WebUI.Controllers
                 .Include(x=>x.Category)
                 .Include(x=>x.ArticleTags)
                 .ThenInclude(x=>x.Tag)
+                .Include(x=>x.ArticleComments)
                 .Where(x => x.IsDeleted==false && x.ArticleTags.Any(at => at.TagId == tagId))
                 .ToList();
 

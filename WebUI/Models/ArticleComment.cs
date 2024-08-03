@@ -11,7 +11,6 @@
         public Article Article { get; set; }
         public string? PhotoUrl { get; set; }
         public string Content { get; set; }
-        public List<CommentReply> CommentReplies { get; set ; }
 
 
 

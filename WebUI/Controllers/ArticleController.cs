@@ -122,13 +122,24 @@ namespace WebUI.Controllers
                 return RedirectToAction("Detail", "Article", new { Id = ArticleId });
            
         }
-        public async Task<IActionResult> AddReply(CommentReply reply)
+        public IActionResult AllArticles()
         {
-          
-            _context.CommentReplies.Add(reply);
-            _context.SaveChanges();
-            return RedirectToAction("Detail", new { id = reply.ArticleComment.ArticleId });
+            var articles=_context.Articles.Include(x=>x.Category)
+                .Include(x=>x.ArticleComments)
+                .ToList();
+            return View(articles);
         }
+        public IActionResult AllLatestArticles()
+        {
+            var latestArticles = _context.Articles
+                .Where(x => x.IsDeleted == false)
+                .Include(x => x.Category)
+                .Include(x=>x.ArticleComments)
+                .OrderByDescending(x => x.CreatedDate)
+                .ToList();
+            return View(latestArticles);
+        }
+      
 
     }
 }   

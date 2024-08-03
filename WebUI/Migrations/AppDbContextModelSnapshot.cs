@@ -283,47 +283,6 @@ namespace WebUI.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WebUI.Models.CommentReply", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ArticleCommentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ArticleId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("PhotoUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ArticleCommentId");
-
-                    b.HasIndex("ArticleId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("CommentReplies");
-                });
-
             modelBuilder.Entity("WebUI.Models.Tag", b =>
                 {
                     b.Property<Guid>("Id")
@@ -479,13 +438,13 @@ namespace WebUI.Migrations
                     b.HasOne("WebUI.Models.Article", "Article")
                         .WithMany("ArticleComments")
                         .HasForeignKey("ArticleId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("WebUI.Models.User", "User")
-                        .WithMany("ArticleComments")
+                        .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Article");
@@ -512,45 +471,11 @@ namespace WebUI.Migrations
                     b.Navigation("Tag");
                 });
 
-            modelBuilder.Entity("WebUI.Models.CommentReply", b =>
-                {
-                    b.HasOne("WebUI.Models.ArticleComment", "ArticleComment")
-                        .WithMany("CommentReplies")
-                        .HasForeignKey("ArticleCommentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebUI.Models.Article", "Article")
-                        .WithMany("CommentReplies")
-                        .HasForeignKey("ArticleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebUI.Models.User", "User")
-                        .WithMany("CommentReplies")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Article");
-
-                    b.Navigation("ArticleComment");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("WebUI.Models.Article", b =>
                 {
                     b.Navigation("ArticleComments");
 
                     b.Navigation("ArticleTags");
-
-                    b.Navigation("CommentReplies");
-                });
-
-            modelBuilder.Entity("WebUI.Models.ArticleComment", b =>
-                {
-                    b.Navigation("CommentReplies");
                 });
 
             modelBuilder.Entity("WebUI.Models.Category", b =>
@@ -561,13 +486,6 @@ namespace WebUI.Migrations
             modelBuilder.Entity("WebUI.Models.Tag", b =>
                 {
                     b.Navigation("ArticleTags");
-                });
-
-            modelBuilder.Entity("WebUI.Models.User", b =>
-                {
-                    b.Navigation("ArticleComments");
-
-                    b.Navigation("CommentReplies");
                 });
 #pragma warning restore 612, 618
         }

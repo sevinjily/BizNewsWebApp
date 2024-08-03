@@ -57,6 +57,7 @@ namespace WebUI.Controllers
 
             return View(homeVM);    
         }
+
       
 
         public IActionResult Privacy()
